@@ -11,6 +11,8 @@ if status is-interactive
     # add github ssh key
     eval (ssh-agent -c)
     ssh-add ~/.ssh/github
+    # add github gpg key
+    set -gx GPG_TTY (tty)
     # vi mode
     fish_vi_key_bindings
 
