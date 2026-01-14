@@ -1,5 +1,5 @@
 -- Colorscheme --
-vim.cmd.colorscheme "catppuccin-latte"
+vim.cmd.colorscheme "catppuccin-mocha"
 -- Looks --
 vim.opt.relativenumber = true
 vim.opt.number = true
