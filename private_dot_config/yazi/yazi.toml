@@ -66,9 +66,6 @@ rules = [
 	{ mime = "*/javascript", use = [ "edit", "reveal" ] },
 	# Empty file
 	{ mime = "inode/empty", use = [ "edit", "reveal" ] },
-	# Fallback
-	{ name = "*", use = [ "open", "reveal" ] },
-    {mime = "application/pdf", use = [ "pdff", "reveal" ] },
 ]
 
 
