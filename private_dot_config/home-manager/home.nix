@@ -25,7 +25,6 @@
     duf
     gdu
     tealdeer
-    gimp
     grim
     slurp
     wl-clipboard
@@ -120,6 +119,7 @@
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;
+    shellWrapperName = "y";
     settings = {
         mgr = {
             ratio          = [ 1 4 3 ];
