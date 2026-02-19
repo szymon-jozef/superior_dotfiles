@@ -4,10 +4,13 @@ position = "Bottom"
 [modules]
 left = [ "Clock", "Workspaces" ]
 center = [ "WindowTitle" ]
-right = ["Privacy", "SystemInfo",[ "Tray", "Settings" ] ]
+right = ["Privacy", "MediaPlayer", "SystemInfo",[ "Tray", "Settings" ] ]
 
 [clock]
-format = "%e.%m | %H:%M"
+format = "%H:%M | %e.%m "
+
+[settings]
+remove_airplane_btn = true
 
 [appearance]
 scale_factor = 1.2
