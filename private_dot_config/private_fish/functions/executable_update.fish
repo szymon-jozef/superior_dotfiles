@@ -14,4 +14,9 @@ function update --description "update system"
     flatpak update --noninteractive
     echo "===Flatpak remove unused==="
     flatpak uninstall --unused
+    echo "===Nix update==="
+    nix-channel --update
+    home-manager switch
+    echo "===Nix garbage collection==="
+    home-manager expire-generations "-7 days"
 end

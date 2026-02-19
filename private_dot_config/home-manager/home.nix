@@ -18,16 +18,19 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    btop
     gh
     fastfetch
     neovim
-    yazi
     fd
     duf
     gdu
     tealdeer
     gimp
+    grim
+    slurp
+    wl-clipboard
+    mako
+    bc
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -104,6 +107,35 @@
       clear
       fastfetch --config ~/.config/fastfetch/startup.jsonc
     '';
+  };
+
+  programs.btop = {
+    enable = true;
+    settings = {
+      vim_keys = true;
+      color_theme = "catppuccin_mocha";
+    };
+  };
+
+  programs.yazi = {
+    enable = true;
+    enableFishIntegration = true;
+    settings = {
+        mgr = {
+            ratio          = [ 1 4 3 ];
+            sort_by        = "alphabetical";
+            sort_sensitive = false;
+            sort_reverse   = false;
+            sort_dir_first = true;
+            sort_translit  = false;
+            linemode       = "none";
+            show_hidden    = false;
+            show_symlink   = true;
+            scrolloff      = 5;
+            mouse_events   = [ "click" "scroll" ];
+            title_format   = "Yazi: {cwd}";
+        };
+    };
   };
 
   # Let Home Manager install and manage itself.
